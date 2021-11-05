@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="/Course01/1-vue-instance/style.css" />
+    <title>Vue</title>
+  </head>
+  <body>
+    <div id="app">
+      <!--String interpolition-->
+      <h1>{{title}}</h1>
+      <p>{{description}}</p>
+      <!--Attribute binding-->
+      <a
+        v-bind:href="youtube.url"
+        :target="youtube.target"
+        :alt="youtube.alt"
+        :name="youtube.name"
+        >{{youtube.title}}</a
+      >
+      <br />
+      <br />
+      <button v-on:click="changeTitle('First Button')">Title Değiştir</button>
+      <button v-on:click="changeTitle('Second Button')">
+        Title 2 Değiştir
+      </button>
+
+      <div
+        @mousemove="updateCords($event,'MouseMoove')"
+        id="box"
+        @click="changeTitle('Box üzerinden gelen')"
+      >
+        Box
+      </div>
+      <span>{{coords.x}},{{coords.y}}</span>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
