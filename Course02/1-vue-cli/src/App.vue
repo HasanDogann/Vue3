@@ -1,4 +1,5 @@
 <template>
+  <app-header />
   <div class="container">
     <h3>İlk Vue 3 CLI ugulamam</h3>
     <p>Component ve Vue CLI konuları</p>
